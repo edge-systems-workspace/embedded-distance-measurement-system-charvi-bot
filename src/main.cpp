@@ -18,3 +18,15 @@ int echo_pin = 10;
  *          the TRIG and ECHO pins for the ultrasonic sensor.
  * @return void
  */
+void setup(){
+    pinMode(trig_pin, OUTPUT);
+    pinMode(echo_pin, INPUT);
+    Serial.begin(9600);
+}
+/**
+ * @brief Arduino main loop function.
+ * @details Sends a trigger pulse to the HC-SR04, measures the echo pulse
+ *          duration, converts the duration to distance in centimeters,
+ *          and prints the result to the Serial Monitor.
+ * @return void
+ */
