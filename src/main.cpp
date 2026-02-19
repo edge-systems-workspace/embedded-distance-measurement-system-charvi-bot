@@ -36,3 +36,10 @@ void loop(){
     digitalWrite(trig_pin, HIGH);
     delayMicroseconds(10);
     digitalWrite(trig_pin, LOW);
+    long duration = pulseIn(echo_pin, HIGH);
+    float distance =  duration*0.034/2;
+    Serial.print("Distance:");
+    Serial.print(distance);
+    Serial.println("cm");
+    delay(500);
+}
