@@ -30,3 +30,9 @@ void setup(){
  *          and prints the result to the Serial Monitor.
  * @return void
  */
+void loop(){
+    digitalWrite(trig_pin, LOW);
+    delayMicroseconds(2);
+    digitalWrite(trig_pin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trig_pin, LOW);
